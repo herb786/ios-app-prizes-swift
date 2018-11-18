@@ -7,23 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E52D5D2921A1CE250086EDB2 /* BodyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D5D2821A1CE250086EDB2 /* BodyResponse.swift */; };
+		E52D5D2B21A1D6770086EDB2 /* PageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D5D2A21A1D6770086EDB2 /* PageNode.swift */; };
+		E52D5D2D21A1D7180086EDB2 /* LinkNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D5D2C21A1D7180086EDB2 /* LinkNode.swift */; };
+		E52D5D2F21A1D7720086EDB2 /* LinkCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D5D2E21A1D7720086EDB2 /* LinkCollection.swift */; };
+		E52D5D3221A1DC1E0086EDB2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D5D3121A1DC1E0086EDB2 /* Constants.swift */; };
+		E52D5D3421A1DD090086EDB2 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D5D3321A1DD090086EDB2 /* ApiService.swift */; };
 		E59FEB34219EDF4E00ACA940 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59FEB33219EDF4E00ACA940 /* AppDelegate.swift */; };
-		E59FEB36219EDF4E00ACA940 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59FEB35219EDF4E00ACA940 /* ViewController.swift */; };
 		E59FEB39219EDF4E00ACA940 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59FEB37219EDF4E00ACA940 /* Main.storyboard */; };
 		E59FEB3C219EDF4E00ACA940 /* NobelLaureates.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E59FEB3A219EDF4E00ACA940 /* NobelLaureates.xcdatamodeld */; };
 		E59FEB3E219EDF4F00ACA940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E59FEB3D219EDF4F00ACA940 /* Assets.xcassets */; };
 		E59FEB41219EDF4F00ACA940 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59FEB3F219EDF4F00ACA940 /* LaunchScreen.storyboard */; };
+		E59FEB49219F291C00ACA940 /* LaureateViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E59FEB48219F291C00ACA940 /* LaureateViewCell.xib */; };
+		E59FEB4B219F2BD200ACA940 /* LaureateViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59FEB4A219F2BD200ACA940 /* LaureateViewCell.swift */; };
+		E59FEB4F219F2D9100ACA940 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59FEB4E219F2D9100ACA940 /* CountryViewController.swift */; };
+		E59FEB51219F3B0700ACA940 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59FEB50219F3B0700ACA940 /* CategoryViewController.swift */; };
+		E59FEB53219F439700ACA940 /* LaureateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59FEB52219F439700ACA940 /* LaureateResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E52D5D2821A1CE250086EDB2 /* BodyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyResponse.swift; sourceTree = "<group>"; };
+		E52D5D2A21A1D6770086EDB2 /* PageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageNode.swift; sourceTree = "<group>"; };
+		E52D5D2C21A1D7180086EDB2 /* LinkNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkNode.swift; sourceTree = "<group>"; };
+		E52D5D2E21A1D7720086EDB2 /* LinkCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkCollection.swift; sourceTree = "<group>"; };
+		E52D5D3121A1DC1E0086EDB2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E52D5D3321A1DD090086EDB2 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		E59FEB30219EDF4E00ACA940 /* NobelLaureates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NobelLaureates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E59FEB33219EDF4E00ACA940 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E59FEB35219EDF4E00ACA940 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E59FEB38219EDF4E00ACA940 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E59FEB3B219EDF4E00ACA940 /* NobelLaureates.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NobelLaureates.xcdatamodel; sourceTree = "<group>"; };
 		E59FEB3D219EDF4F00ACA940 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E59FEB40219EDF4F00ACA940 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E59FEB42219EDF4F00ACA940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E59FEB48219F291C00ACA940 /* LaureateViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaureateViewCell.xib; sourceTree = "<group>"; };
+		E59FEB4A219F2BD200ACA940 /* LaureateViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaureateViewCell.swift; sourceTree = "<group>"; };
+		E59FEB4E219F2D9100ACA940 /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
+		E59FEB50219F3B0700ACA940 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		E59FEB52219F439700ACA940 /* LaureateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaureateResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +57,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E52D5D3021A1D8720086EDB2 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				E52D5D2821A1CE250086EDB2 /* BodyResponse.swift */,
+				E52D5D2A21A1D6770086EDB2 /* PageNode.swift */,
+				E52D5D2E21A1D7720086EDB2 /* LinkCollection.swift */,
+				E52D5D2C21A1D7180086EDB2 /* LinkNode.swift */,
+				E59FEB52219F439700ACA940 /* LaureateResponse.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		E59FEB27219EDF4E00ACA940 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +88,19 @@
 		E59FEB32219EDF4E00ACA940 /* NobelLaureates */ = {
 			isa = PBXGroup;
 			children = (
+				E52D5D3021A1D8720086EDB2 /* models */,
 				E59FEB33219EDF4E00ACA940 /* AppDelegate.swift */,
-				E59FEB35219EDF4E00ACA940 /* ViewController.swift */,
 				E59FEB37219EDF4E00ACA940 /* Main.storyboard */,
 				E59FEB3D219EDF4F00ACA940 /* Assets.xcassets */,
 				E59FEB3F219EDF4F00ACA940 /* LaunchScreen.storyboard */,
 				E59FEB42219EDF4F00ACA940 /* Info.plist */,
 				E59FEB3A219EDF4E00ACA940 /* NobelLaureates.xcdatamodeld */,
+				E59FEB48219F291C00ACA940 /* LaureateViewCell.xib */,
+				E59FEB4A219F2BD200ACA940 /* LaureateViewCell.swift */,
+				E59FEB4E219F2D9100ACA940 /* CountryViewController.swift */,
+				E59FEB50219F3B0700ACA940 /* CategoryViewController.swift */,
+				E52D5D3121A1DC1E0086EDB2 /* Constants.swift */,
+				E52D5D3321A1DD090086EDB2 /* ApiService.swift */,
 			);
 			path = NobelLaureates;
 			sourceTree = "<group>";
@@ -128,6 +166,7 @@
 				E59FEB41219EDF4F00ACA940 /* LaunchScreen.storyboard in Resources */,
 				E59FEB3E219EDF4F00ACA940 /* Assets.xcassets in Resources */,
 				E59FEB39219EDF4E00ACA940 /* Main.storyboard in Resources */,
+				E59FEB49219F291C00ACA940 /* LaureateViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +177,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E59FEB36219EDF4E00ACA940 /* ViewController.swift in Sources */,
+				E52D5D2B21A1D6770086EDB2 /* PageNode.swift in Sources */,
 				E59FEB3C219EDF4E00ACA940 /* NobelLaureates.xcdatamodeld in Sources */,
+				E52D5D3421A1DD090086EDB2 /* ApiService.swift in Sources */,
+				E52D5D2D21A1D7180086EDB2 /* LinkNode.swift in Sources */,
+				E52D5D2921A1CE250086EDB2 /* BodyResponse.swift in Sources */,
 				E59FEB34219EDF4E00ACA940 /* AppDelegate.swift in Sources */,
+				E52D5D2F21A1D7720086EDB2 /* LinkCollection.swift in Sources */,
+				E59FEB4F219F2D9100ACA940 /* CountryViewController.swift in Sources */,
+				E59FEB53219F439700ACA940 /* LaureateResponse.swift in Sources */,
+				E59FEB51219F3B0700ACA940 /* CategoryViewController.swift in Sources */,
+				E59FEB4B219F2BD200ACA940 /* LaureateViewCell.swift in Sources */,
+				E52D5D3221A1DC1E0086EDB2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
