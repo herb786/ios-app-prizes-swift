@@ -47,9 +47,28 @@ class ApiService {
                         self.laureates.append(laureate)
                     }
                 }
-                self.concurrencyHandler(laureates: self.laureates, queries: self.queries!)
+                self.concurrencyDispatchHandler(laureates: self.laureates, queries: self.queries!)
             } catch {
             }
+        }
+    }
+    
+    func concurrencyDispatchHandler(laureates: [LaureateResponse], queries:[LaureateQuery]){
+        let queue = DispatchQueue.global(qos: .background)
+        for case let query in queries {
+            let work = DispatchWorkItem.init(block: {
+                var filteredLaureates: [LaureateResponse] = []
+                for laureate in self.laureates {
+                    if (laureate.country.lowercased().contains(query.rawValue) ||
+                        laureate.category.lowercased().contains(query.rawValue)){
+                        filteredLaureates.append(laureate)
+                    }
+                }
+                DispatchQueue.main.async {
+                    self.delegate?.consumeLaureates(laureates: filteredLaureates, query: query)
+                }
+            })
+            queue.async(execute: work)
         }
     }
     
