@@ -28,17 +28,23 @@ extension CategoryViewController: UICollectionViewDataSource {
         if (collectionView == physicsCollection){
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: laureateCellNib, for: indexPath) as! LaureateViewCell
             let urlPhoto = physicsLaureates[indexPath.row].photo
-            do {
-                if let urlImg = URL.init(string: urlPhoto) {
-                    let data = try Data.init(contentsOf: urlImg)
-                    cell.imgPhoto?.image = UIImage.init(data: data)
-                }
-            } catch {}
+            // Solve sudden stops issue when scrolling photos
+            DispatchQueue.global(qos: .utility).async {
+                do {
+                    if let urlImg = URL.init(string: urlPhoto) {
+                        let data = try Data.init(contentsOf: urlImg)
+                        DispatchQueue.main.async {
+                            cell.imgPhoto?.image = UIImage.init(data: data)
+                        }
+                    }
+                } catch {}
+            }
             cell.lblName?.text = physicsLaureates[indexPath.row].name
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: laureateCellNib, for: indexPath) as! LaureateViewCell
             let urlPhoto = medicineLaureates[indexPath.row].photo
+            // Bad user experience
             do {
                 if let urlImg = URL.init(string: urlPhoto) {
                     let data = try Data.init(contentsOf: urlImg)

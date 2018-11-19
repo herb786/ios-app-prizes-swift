@@ -27,7 +27,7 @@ extension CountryViewController: UICollectionViewDataSource {
         if (collectionView == japanCollection){
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: laureateCellNib, for: indexPath) as! LaureateViewCell
             let urlPhoto = japanLaureates[indexPath.row].photo
-            DispatchQueue.init(label: "Fetch Photo").async {
+            DispatchQueue.global(qos: .background).async {
                 do {
                     if let urlImg = URL.init(string: urlPhoto) {
                         let data = try Data.init(contentsOf: urlImg)
