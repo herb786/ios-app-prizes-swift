@@ -8,49 +8,71 @@
 
 import UIKit
 
-let laureateCellNib = "LaureateViewCell"
-let japanCellIdentifier = "JapanCellIdentifier"
-let germanyCellIdentifier = "GermanyCellIdentifier"
-let rowHeight: CGFloat = 80.0
-
-extension CountryViewController {
-    func configureCollections() {
-        japanCollection?.register(UINib.init(nibName: laureateCellNib, bundle: nil), forCellWithReuseIdentifier: japanCellIdentifier)
-        germanyCollection?.register(UINib.init(nibName: laureateCellNib, bundle: nil), forCellWithReuseIdentifier: germanyCellIdentifier)
-    }
-}
-
 extension CountryViewController: UICollectionViewDelegate {
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return rowHeight
-    }
     
 }
 
 extension CountryViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if (collectionView == japanCollection){
+            return japanLaureates.count
+        } else if (collectionView == italyCollection) {
+            return italyLaureates.count
+        }
         return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: japanCellIdentifier, for: indexPath) as! LaureateViewCell
-        return cell
+        if (collectionView == japanCollection){
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: laureateCellNib, for: indexPath) as! LaureateViewCell
+            let urlPhoto = japanLaureates[indexPath.row].photo
+            DispatchQueue.init(label: "Fetch Photo").async {
+                do {
+                    if let urlImg = URL.init(string: urlPhoto) {
+                        let data = try Data.init(contentsOf: urlImg)
+                        DispatchQueue.main.async {
+                            cell.imgPhoto?.image = UIImage.init(data: data)
+                        }
+                    }
+                } catch {}
+            }
+            cell.lblName?.text = japanLaureates[indexPath.row].name
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: laureateCellNib, for: indexPath) as! LaureateViewCell
+            let urlPhoto = italyLaureates[indexPath.row].photo
+            do {
+                if let urlImg = URL.init(string: urlPhoto) {
+                    let data = try Data.init(contentsOf: urlImg)
+                    cell.imgPhoto?.image = UIImage.init(data: data)
+                }
+            } catch {}
+            cell.lblName?.text = italyLaureates[indexPath.row].name
+            return cell
+        }
     }
     
 }
 
-class CountryViewController: UIViewController {
+class CountryViewController: UIViewController, ApiServiceDelegate {
     
+    var japanLaureates: [LaureateResponse] = []
+    var italyLaureates: [LaureateResponse] = []
+    
+    let apiService = ApiService()
+    let laureateCellNib = "LaureateViewCell"
     @IBOutlet weak var japanCollection: UICollectionView?
-    @IBOutlet weak var germanyCollection: UICollectionView?
+    @IBOutlet weak var italyCollection: UICollectionView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         configureCollections()
+        apiService.queries = [LaureateQuery.Italy, LaureateQuery.Japan]
+        apiService.delegate = self
+        apiService.findAllLaureates()
     }
     
 
@@ -63,5 +85,20 @@ class CountryViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func consumeLaureates(laureates: [LaureateResponse], query: LaureateQuery) {
+        if (query == LaureateQuery.Italy) {
+            self.italyLaureates = laureates
+            self.italyCollection?.reloadData()
+        } else if (query == LaureateQuery.Japan) {
+            self.japanLaureates = laureates
+            self.japanCollection?.reloadData()
+        }
+    }
+    
+    func configureCollections() {
+        japanCollection?.register(UINib.init(nibName: laureateCellNib, bundle: nil), forCellWithReuseIdentifier: laureateCellNib)
+        italyCollection?.register(UINib.init(nibName: laureateCellNib, bundle: nil), forCellWithReuseIdentifier: laureateCellNib)
+    }
 
 }

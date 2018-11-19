@@ -25,10 +25,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="295"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="buS-Q6-KTo">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNB-6w-bji">
-                                                        <rect key="frame" x="116" y="28.5" width="143.5" height="39"/>
+                                                        <rect key="frame" x="116" y="21.5" width="143.5" height="39"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -41,22 +41,23 @@
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nma-FW-E3d">
-                                                <rect key="frame" x="0.0" y="103.5" width="375" height="191.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="0.0" y="90" width="375" height="205"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dbg-ne-Nlk">
-                                                    <size key="itemSize" width="100" height="96"/>
+                                                    <size key="itemSize" width="172" height="197"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="0RX-rt-Fk4" customClass="LaureateViewCell" customModule="NobelLaureates" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="48" width="100" height="96"/>
+                                                        <rect key="frame" x="0.0" y="4" width="172" height="197"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="96"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="172" height="197"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </view>
+                                                        <viewLayoutGuide key="safeArea" id="rwf-5W-mE0"/>
                                                     </collectionViewCell>
                                                 </cells>
                                                 <connections>
@@ -66,17 +67,17 @@
                                             </collectionView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="nma-FW-E3d" firstAttribute="height" secondItem="buS-Q6-KTo" secondAttribute="height" multiplier="2" id="iku-ub-aRM"/>
+                                            <constraint firstItem="nma-FW-E3d" firstAttribute="height" secondItem="buS-Q6-KTo" secondAttribute="height" multiplier="2.5" id="iku-ub-aRM"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Xg1-NB-xHs">
                                         <rect key="frame" x="0.0" y="303" width="375" height="295"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wHH-aY-VgQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Physics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjc-6P-m5R">
-                                                        <rect key="frame" x="130.5" y="28.5" width="114" height="39"/>
+                                                        <rect key="frame" x="130.5" y="21.5" width="114" height="39"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -89,20 +90,20 @@
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f9V-N1-4Re">
-                                                <rect key="frame" x="0.0" y="103.5" width="375" height="191.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DG4-mZ-wa0">
-                                                    <size key="itemSize" width="82" height="96"/>
+                                                <rect key="frame" x="0.0" y="90" width="375" height="205"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DG4-mZ-wa0">
+                                                    <size key="itemSize" width="170" height="194"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="" id="Yej-g1-PU6" customClass="LaureateViewCell" customModule="NobelLaureates" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="82" height="96"/>
+                                                        <rect key="frame" x="0.0" y="5.5" width="170" height="194"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="82" height="96"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="170" height="194"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </view>
                                                     </collectionViewCell>
@@ -114,7 +115,7 @@
                                             </collectionView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="f9V-N1-4Re" firstAttribute="height" secondItem="wHH-aY-VgQ" secondAttribute="height" multiplier="2" id="EkA-P7-Vfv"/>
+                                            <constraint firstItem="f9V-N1-4Re" firstAttribute="height" secondItem="wHH-aY-VgQ" secondAttribute="height" multiplier="2.5" id="EkA-P7-Vfv"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -132,7 +133,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Category" id="Wad-n3-0l5"/>
+                    <tabBarItem key="tabBarItem" title="Category" image="open-book" id="Wad-n3-0l5"/>
                     <connections>
                         <outlet property="medicineCollection" destination="nma-FW-E3d" id="06m-EE-t4Z"/>
                         <outlet property="physicsCollection" destination="f9V-N1-4Re" id="cte-Qv-J1M"/>
@@ -150,7 +151,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vjd-cP-dpE">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.15056313569999999" green="0.15055863559999999" blue="0.15056121350000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="q65-eQ-gxQ"/>
@@ -176,10 +178,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="299"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfH-q4-Sq8">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="85.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Japan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHE-pg-ofz">
-                                                        <rect key="frame" x="0.0" y="30.5" width="375" height="39"/>
+                                                        <rect key="frame" x="0.0" y="23" width="375" height="39"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -193,38 +195,42 @@
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G1I-VF-lGg">
-                                                <rect key="frame" x="0.0" y="99.5" width="375" height="199.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="0.0" y="85.5" width="375" height="213.5"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="p6h-ek-M0k">
-                                                    <size key="itemSize" width="100" height="96"/>
+                                                    <size key="itemSize" width="171" height="206"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="JapanCellIdentifier" id="sfD-9N-xa1" customClass="LaureateViewCell" customModule="NobelLaureates" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="52" width="100" height="96"/>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="" id="sfD-9N-xa1" customClass="LaureateViewCell" customModule="NobelLaureates" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="4" width="171" height="206"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="96"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="171" height="206"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </view>
                                                     </collectionViewCell>
                                                 </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="wfe-W3-lz7" id="OE5-qC-OAg"/>
+                                                    <outlet property="delegate" destination="wfe-W3-lz7" id="lhN-PP-1NA"/>
+                                                </connections>
                                             </collectionView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="G1I-VF-lGg" firstAttribute="height" secondItem="xfH-q4-Sq8" secondAttribute="height" multiplier="2" id="kUD-4R-Trn"/>
+                                            <constraint firstItem="G1I-VF-lGg" firstAttribute="height" secondItem="xfH-q4-Sq8" secondAttribute="height" multiplier="2.5" id="kUD-4R-Trn"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="B2t-y2-bvk">
                                         <rect key="frame" x="0.0" y="299" width="375" height="299"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMu-S9-QPA">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="85.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Italy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTo-xg-fFG">
-                                                        <rect key="frame" x="0.0" y="30.5" width="375" height="39"/>
+                                                        <rect key="frame" x="0.0" y="23" width="375" height="39"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -238,28 +244,32 @@
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xSX-YC-6ue">
-                                                <rect key="frame" x="0.0" y="99.5" width="375" height="199.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="0.0" y="85.5" width="375" height="213.5"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="16i-1F-C6O">
-                                                    <size key="itemSize" width="100" height="96"/>
+                                                    <size key="itemSize" width="173" height="206"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="GermanyCellIdentifier" id="HNa-tg-ReI" customClass="LaureateViewCell" customModule="NobelLaureates" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="52" width="100" height="96"/>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="" id="HNa-tg-ReI" customClass="LaureateViewCell" customModule="NobelLaureates" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="4" width="173" height="206"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="96"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="173" height="206"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </view>
                                                     </collectionViewCell>
                                                 </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="wfe-W3-lz7" id="QMc-Tu-iCe"/>
+                                                    <outlet property="delegate" destination="wfe-W3-lz7" id="9rU-he-BRY"/>
+                                                </connections>
                                             </collectionView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="xSX-YC-6ue" firstAttribute="height" secondItem="qMu-S9-QPA" secondAttribute="height" multiplier="2" id="Guo-QK-SZ8"/>
+                                            <constraint firstItem="xSX-YC-6ue" firstAttribute="height" secondItem="qMu-S9-QPA" secondAttribute="height" multiplier="2.5" id="Guo-QK-SZ8"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -274,11 +284,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FI8-5t-Mzv"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Country" id="oAx-1h-Sce"/>
+                    <tabBarItem key="tabBarItem" title="Country" image="maps-and-flags" id="oAx-1h-Sce"/>
+                    <connections>
+                        <outlet property="italyCollection" destination="xSX-YC-6ue" id="ABi-1y-gVz"/>
+                        <outlet property="japanCollection" destination="G1I-VF-lGg" id="UwJ-x6-kcA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PR3-mo-alQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1069.5999999999999" y="539.28035982008998"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="maps-and-flags" width="32" height="32"/>
+        <image name="open-book" width="25.600000381469727" height="25.600000381469727"/>
+    </resources>
 </document>

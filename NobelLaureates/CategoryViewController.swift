@@ -10,9 +10,6 @@ import UIKit
 
 extension CategoryViewController: UICollectionViewDelegate {
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return rowHeight
-    }
     
 }
 
